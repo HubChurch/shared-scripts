@@ -47,7 +47,7 @@ async function downloadS3Files() {
     for (const awsFile of AWS_FILES) {
         const s3Key = Object.keys(awsFile)[0];
         const localPath = awsFile[s3Key];
-        const fileUrl = `https://${BUCKET}.s3.sa-east-1.amazonaws.com/${s3Key}`;
+        const fileUrl = `https://${BUCKET}.s3-website-sa-east-1.amazonaws.com/${s3Key}`;
 
         try {
             const response = await fetch(fileUrl);
