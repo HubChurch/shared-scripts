@@ -17,12 +17,14 @@ validateEnv();
 
 // ✅ Removido o segundo const BUCKET
 const BUCKET = process.env.BUCKET;
+console.log('BUCKET:', BUCKET);
 if (!BUCKET) {
     console.error('❌ BUCKET não está definido.');
     process.exit(1);
 }
 
 const AWS_FILES_RAW = process.env.AWS_FILES;
+console.log('AWS_FILES_RAW:', AWS_FILES_RAW);
 if (!AWS_FILES_RAW) {
     console.error('❌ AWS_FILES não está definido.');
     process.exit(1);
